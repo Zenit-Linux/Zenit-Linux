@@ -1,1 +1,205 @@
-
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenit Linux - Pobierz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+            color: #FFFFFF;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #D4AF37, #A68B2A);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            width: 160px;
+            height: auto;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+        .logo img:hover {
+            transform: rotate(5deg) scale(1.1);
+            filter: brightness(1.3);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #FFFFFF;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        nav a:hover {
+            color: #D4AF37;
+            transform: translateY(-2px);
+        }
+        main {
+            flex: 1;
+            max-width: 1300px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        .download-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(0, 0, 0, 0.9));
+            padding: 4rem 2rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 10s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            color: #D4AF37;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+        h2 {
+            color: #FFFFFF;
+            font-size: 2rem;
+            margin: 2rem 0 1.5rem;
+        }
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #F0F0F0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .download-btn {
+            background: linear-gradient(90deg, #D4AF37, #B8972C);
+            color: #FFFFFF;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background: linear-gradient(90deg, #B8972C, #D4AF37);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        ol {
+            text-align: left;
+            max-width: 600px;
+            margin: 2rem auto;
+            font-size: 1.2rem;
+            color: #F0F0F0;
+            list-style: decimal;
+            padding-left: 2rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #D4AF37, #A68B2A);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.1rem;
+            box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.4);
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .logo img {
+                width: 130px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .download-section {
+                padding: 2.5rem 1.5rem;
+            }
+            .download-btn {
+                display: block;
+                margin: 0.75rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="about-zenit.html">O Zenit</a></li>
+                <li><a href="download.html">Pobierz</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="zenit-linux.png" alt="Zenit Linux Logo">
+        </div>
+    </header>
+    <main>
+        <div class="download-section">
+            <h1>Pobierz Zenit Linux</h1>
+            <p>Pobierz najnowszą wersję Zenit Linux i zainstaluj na swoim komputerze. Wspieramy instalację z ISO lub aktualizacje dla istniejących systemów.</p>
+            <a href="#iso" class="download-btn">Pobierz ISO (x64)</a>
+            <a href="#torrent" class="download-btn">Pobierz via Torrent</a>
+            <p><small>Wersja 1.0 | Rozmiar: 2.5 GB | SHA256: [hash do weryfikacji]</small></p>
+            <h2>Instrukcja instalacji</h2>
+            <ol>
+                <li>Sfleszuj ISO na pendrive za pomocą Rufus lub dd.</li>
+                <li>Uruchom z boot menu.</li>
+                <li>Postępuj według kreatora instalacji.</li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Zenit Linux. Wszelkie prawa zastrzeżone.
+    </footer>
+</body>
+</html>
