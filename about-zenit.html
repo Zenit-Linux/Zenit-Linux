@@ -1,1 +1,205 @@
-
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenit Linux - O Systemie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+            color: #FFFFFF;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #D4AF37, #A68B2A);
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            width: 160px;
+            height: auto;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+        .logo img:hover {
+            transform: rotate(5deg) scale(1.1);
+            filter: brightness(1.3);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #FFFFFF;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        nav a:hover {
+            color: #D4AF37;
+            transform: translateY(-2px);
+        }
+        main {
+            flex: 1;
+            max-width: 1300px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        .section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(0, 0, 0, 0.9));
+            padding: 4rem 2rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 10s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            color: #D4AF37;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+        }
+        h2 {
+            color: #FFFFFF;
+            font-size: 2rem;
+            margin: 2rem 0 1.5rem;
+        }
+        p, li {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #F0F0F0;
+        }
+        ul {
+            list-style: disc;
+            margin: 1.5rem 0 1.5rem 2.5rem;
+        }
+        code {
+            background: rgba(212, 175, 55, 0.2);
+            color: #FFFFFF;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+        }
+        a {
+            color: #D4AF37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+        footer {
+            background: linear-gradient(90deg, #D4AF37, #A68B2A);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.1rem;
+            box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.4);
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .logo img {
+                width: 130px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="about-zenit.html">O Zenit</a></li>
+                <li><a href="download.html">Pobierz</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="zenit-linux.png" alt="Zenit Linux Logo">
+        </div>
+    </header>
+    <main>
+        <div class="section">
+            <h1>O Zenit Linux</h1>
+            <p>Zenit Linux to innowacyjna dystrybucja Linuksa, która łączy stabilność Ubuntu z zaawansowanymi optymalizacjami dla wydajności. Nasza dystrybucja jest idealna dla użytkowników poszukujących szybkiego i intuicyjnego systemu operacyjnego.</p>
+            
+            <h2>Główne cechy:</h2>
+            <ul>
+                <li><strong>Jądro Liquorix:</strong> Zoptymalizowane dla niskiego opóźnienia i wysokiej responsywności, idealne do gier, edycji wideo i codziennego użytku.</li>
+                <li><strong>Środowisko graficzne Budgie:</strong> Nowoczesny i lekki desktop z pięknym interfejsem, inspirowany GNOME, ale bardziej wydajny.</li>
+                <li><strong>Baza Ubuntu:</strong> Pełna kompatybilność z ekosystemem Ubuntu, co zapewnia dostęp do milionów pakietów.</li>
+            </ul>
+            
+            <h2>Zarządzanie systemem:</h2>
+            <ul>
+                <li><strong>Aktualizacje systemu:</strong> Użyj <code>zpm update</code>, <code>zpm autoremove</code> i <code>zpm autoclean</code> dla łatwego utrzymania czystości i aktualności.</li>
+                <li><strong>Instalacja, aktualizacja i usuwanie pakietów:</strong> Korzystaj z <strong>Isolator</strong> – instaluj aplikacje w izolowanych kontenerach z Arch Linuksa. Aplikacje korzystają z pacmana, AUR i Podmana dla bezpieczeństwa i izolacji.</li>
+                <li><strong>Pakiety społeczności Zenit Linux:</strong> Instaluj za pomocą <strong>ZCR</strong>: <code>zcr update</code>, <code>zcr install [pakiet]</code>, <code>zcr remove [pakiet]</code>, <code>zcr refresh</code>.</li>
+            </ul>
+            
+            <h2>Dodanie repozytorium:</h2>
+            <p>Aby dodać swoje repozytorium Git do ZCR, skontaktuj się z nami:</p>
+            <ul>
+                <li>GitHub Discussions: <a href="https://github.com/Zenit-Linux/Zenit-Linux/discussions">https://github.com/Zenit-Linux/Zenit-Linux/discussions</a></li>
+                <li>Email: <a href="mailto:zenitlinux307@gmail.com">zenitlinux307@gmail.com</a></li>
+            </ul>
+            
+            <p>Dołącz do społeczności i przyczyn się do rozwoju Zenit Linux!</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Zenit Linux. Wszelkie prawa zastrzeżone.
+    </footer>
+</body>
+</html>
